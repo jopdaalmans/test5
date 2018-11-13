@@ -25,6 +25,7 @@ class Choice(models.Model):
     votes = models.IntegerField(default=0)
 
     def __str__(self):
+<<<<<<< HEAD
         return self.choice_text
 
 
@@ -34,3 +35,6 @@ class Item(models.Model):
     image = models.ImageField(blank=True, null=True)
     def __str__(self):
         return self.name
+=======
+        return self.choice_text
+>>>>>>> bf2469612169701326422f4adec9b6583fc98eab

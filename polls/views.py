@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 #test
+=======
+>>>>>>> bf2469612169701326422f4adec9b6583fc98eab
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
