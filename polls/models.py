@@ -35,4 +35,3 @@ class Item(models.Model):
     image = models.ImageField(blank=True, null=True)
     def __str__(self):
         return self.name
-        return self.choice_text
