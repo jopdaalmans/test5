@@ -1,0 +1,14 @@
+{% extends 'imagepoll/base.html' %}
+
+{% block head %}
+  <title>Home feedbackshop</title>
+{% endblock %}
+
+{% block body %}
+{% for category in categories %}
+  <h2> {{ category.name}}</h2>
+    {% for item in category.item_set.all %}
+      <a href="{% url 'imagepoll:itemdetail' item_id=item.id %}">{{ item.name }}</a>
+    {% endfor %}
+  {% endfor %}
+{% endblock %}

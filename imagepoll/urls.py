@@ -20,4 +20,5 @@ from . import views
 app_name = 'imagepoll'
 urlpatterns = [
     path('', views.index, name='index'),
+    path('<int:item_id>/', views.itemdetail, name='itemdetail'),
 ]

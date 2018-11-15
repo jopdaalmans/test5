@@ -1,0 +1,20 @@
+{% extends 'imagepoll/base.html' %}
+
+{% block head %}
+  {% if item != None %}
+    <title>{{ item.name}}</title>
+  {% else %}
+    <title>Invalid item</title>
+  {% endif %}
+{% endblock %}
+
+{% block body %}
+  <a href="{% url 'imagepoll:index' %}">&lt; Back<a/>
+  {% if item != None %}
+    <h1>{{ item.name}}</h1>
+    <h4>{{ item.category.name }} </h4>
+    <p> {{ item.description}}</p>
+  {% else %}
+    <p> Invalid item ID.</p>
+  {% endif %}
+{% endblock %}
