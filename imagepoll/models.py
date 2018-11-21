@@ -1,4 +1,5 @@
 from django.db import models
+from django.views.generic.edit import CreateView
 
 # Create your models here.
 class Category(models.Model):

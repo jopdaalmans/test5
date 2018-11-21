@@ -5,13 +5,14 @@
 {% endblock %}
 
 {% block body %}
-{% for category in categories %}
+  {% for category in categories %}
   <h2> {{ category.name}}</h2>
     {% for item in category.item_set.all %}
-      <a href="{% url 'imagepoll:itemdetail' item_id=item.id %}">
-      {% if item.image != None %}
-        <img src="{{ item.image.url }}" height="80" width="150">
-      {% endif %}</a>
+      <a href="{% url 'imagepoll:itemdetail' item.id %}">
+        {% if item.image != None %}
+          <img src="{{ item.image.url }}" height="80" width="150">
+        {% endif %}
+      </a>
     {% endfor %}
   {% endfor %}
 {% endblock %}

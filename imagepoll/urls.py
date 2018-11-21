@@ -19,6 +19,7 @@ from . import views
 
 app_name = 'imagepoll'
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('<int:item_id>/', views.itemdetail, name='itemdetail'),
+    path('', views.IndexView.as_view(), name='index'),
+    path('<int:pk>/', views.itemdetail.as_view(), name='itemdetail'),
+    path('register/', views.UserFormView.as_view(), name='register')
 ]
