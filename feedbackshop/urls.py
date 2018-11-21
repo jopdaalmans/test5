@@ -15,9 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls.static import static
+from feedbackshop import settings
 
 urlpatterns = [
     path('imagepoll/', include('imagepoll.urls',namespace= 'imagepoll')),
     path('polls/', include('polls.urls', namespace = 'polls')),
     path('admin/', admin.site.urls),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

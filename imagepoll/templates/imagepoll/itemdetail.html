@@ -14,6 +14,9 @@
     <h1>{{ item.name}}</h1>
     <h4>{{ item.category.name }} </h4>
     <p> {{ item.description}}</p>
+    {% if item.image != None %}
+      <img src="{{ item.image.url }}">
+    {% endif %}
   {% else %}
     <p> Invalid item ID.</p>
   {% endif %}
